@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Controllers.LogIn"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<Pane fx:id="LogInPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/LogIn.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LogIn">
+   <children>
+      <Pane id="sidePane" prefHeight="456.0" prefWidth="368.0" />
+      <Label alignment="CENTER" layoutX="430.0" layoutY="14.0" prefHeight="46.0" prefWidth="269.0" text="Log In" textFill="#2a5e03">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="LogInPassField" layoutX="455.0" layoutY="228.0" prefHeight="25.0" prefWidth="210.0" promptText="password" />
+      <TextField fx:id="LogInUserField" layoutX="459.0" layoutY="143.0" prefHeight="25.0" prefWidth="210.0" promptText="username" />
+      <Label fx:id="usernameLabel" layoutX="459.0" layoutY="119.0" text="Username" />
+      <Label fx:id="passLabel" layoutX="459.0" layoutY="208.0" prefHeight="17.0" prefWidth="81.0" text="password" />
+      <Button fx:id="LogInButton" layoutX="457.0" layoutY="285.0" mnemonicParsing="false" onAction="#goToNotesMenu" prefHeight="25.0" prefWidth="210.0" text="Log In" />
+      <Button layoutX="368.0" mnemonicParsing="false" onAction="#goToMainMenu" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="goBack" textFill="#140451">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="loginState" alignment="CENTER" layoutX="371.0" layoutY="394.0" prefHeight="59.0" prefWidth="368.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

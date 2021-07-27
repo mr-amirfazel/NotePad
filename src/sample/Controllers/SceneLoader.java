@@ -41,12 +41,41 @@ public class SceneLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage = (Stage) pane.getScene().getWindow();
         scene = new Scene(root);
         String css = this.getClass().getResource("../View/Styles/MainMenu.css").toExternalForm();
         scene.getStylesheets().add(css);
-        stage.setTitle("Welcome Page");
+        stage.setTitle("Welcome");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void goToLogIn(Pane pane)
+    {
+        try {
+            root = FXMLLoader.load(getClass().getResource("../View/LogIn.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage = (Stage) pane.getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("../View/Styles/LogIn.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        stage.setTitle("LogIn");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void goToNotesMenu(Pane pane)
+    {
+        try {
+            root = FXMLLoader.load(getClass().getResource("../View/NotesMenu.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage = (Stage) pane.getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("../View/Styles/NotesMenu.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        stage.setTitle("Notes Menu");
         stage.setScene(scene);
         stage.show();
     }

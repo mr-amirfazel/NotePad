@@ -35,7 +35,7 @@ public class MainMenu implements Initializable {
 
     @FXML
     void goToLogin(ActionEvent event) {
-
+        sceneLoader.goToLogIn(mainMenuPane);
     }
 
     @FXML

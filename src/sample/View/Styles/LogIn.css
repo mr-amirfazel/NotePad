@@ -1,0 +1,22 @@
+#sidePane
+{
+    -fx-background-image: url(../Images/notepad.jpg);
+    -fx-background-size: cover;
+}
+#LogInPane{
+    -fx-background-color: linear-gradient(to bottom, rgba(22,131,40,1) 0%, rgba(133,244,104,1) 100%);
+}
+#LogInButton
+{
+    -fx-background-color: midnightblue;
+    -fx-text-fill: red;
+}
+#usernameLabel,#passLabel
+{
+    -fx-text-fill: #cd2b58;
+}
+#LogInPassField , #LogInUserField
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #191970 transparent;
+}
