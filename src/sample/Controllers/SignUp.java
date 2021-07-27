@@ -8,9 +8,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import sample.Model.SharedData;
+import sample.Model.User;
 
 public class SignUp {
     private final SceneLoader sceneLoader = new SceneLoader();
+    private SharedData sharedData = SharedData.getInstance();
 
     @FXML
     private Pane SignUpPane;
@@ -42,6 +45,7 @@ public class SignUp {
         if(passField.getText().equals(secPassField.getText()))
         {
             stateLabel.setText("sign Up was successful");
+            sharedData.user = new User(usernameField.getText(), passField.getText());
         }
         else
             stateLabel.setText("password fields doesnt match :(");
