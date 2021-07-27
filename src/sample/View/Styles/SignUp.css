@@ -1,0 +1,18 @@
+#sidePane
+{
+    -fx-background-image: url(../Images/notepad.jpg);
+    -fx-background-size: cover;
+}
+#SignUpPane
+{
+    -fx-background-color: linear-gradient(to bottom, rgba(22,131,40,1) 0%, rgba(133,244,104,1) 100%);
+}
+
+#usernameField , #passField , #secPassField
+{
+    -fx-background-color: transparent;
+}
+#signUpButton
+{
+    -fx-background-color: midnightBlue;
+}
