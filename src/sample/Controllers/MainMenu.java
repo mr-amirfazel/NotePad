@@ -2,10 +2,16 @@ package sample.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
-public class MainMenu {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MainMenu implements Initializable {
+    private SceneLoader sceneLoader;
 
     @FXML
     private Pane mainMenuPane;
@@ -14,10 +20,13 @@ public class MainMenu {
     private Button signUpButton;
 
     @FXML
-    private Pane sidePane;
+    private Button infoButton;
 
     @FXML
-    private Button infoButton;
+    private Button logInButton;
+
+    public MainMenu() {
+    }
 
     @FXML
     void goToInfo(ActionEvent event) {
@@ -26,12 +35,16 @@ public class MainMenu {
 
     @FXML
     void goToLogin(ActionEvent event) {
-
+        sceneLoader.goToLogIn(mainMenuPane);
     }
 
     @FXML
-    void goToSignUp(ActionEvent event) {
-
+    void goToSignUp() {
+            sceneLoader.goToSignUpPage(mainMenuPane);
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        sceneLoader = new SceneLoader();
+    }
 }
