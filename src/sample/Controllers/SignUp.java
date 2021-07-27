@@ -3,6 +3,7 @@ package sample.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -28,6 +29,8 @@ public class SignUp {
 
     @FXML
     private PasswordField secPassField;
+    @FXML
+    private Label stateLabel;
 
     @FXML
     void goToMain() {
@@ -36,6 +39,13 @@ public class SignUp {
 
     @FXML
     void signUpUser(ActionEvent event) {
+        stateLabel = new Label();
+        if(passField.getText().equals(secPassField.getText()))
+        {
+            stateLabel.setText("sign Up was successful");
+        }
+        else
+            stateLabel.setText("password fields doesnt match :(");
 
     }
 
