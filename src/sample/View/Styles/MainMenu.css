@@ -1,0 +1,5 @@
+#sidePane
+{
+    -fx-background-image: url(../Images/notepad.jpg);
+    -fx-background-size: cover;
+}
