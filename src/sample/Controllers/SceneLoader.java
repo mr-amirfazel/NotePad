@@ -79,5 +79,20 @@ public class SceneLoader {
         stage.setScene(scene);
         stage.show();
     }
+    public void goToNoteBook(Pane pane)
+    {
+        try {
+            root = FXMLLoader.load(getClass().getResource("../View/NoteBook.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage = (Stage) pane.getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("../View/Styles/NoteBook.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        stage.setTitle("Note Book");
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

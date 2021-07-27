@@ -65,7 +65,7 @@ public class NotesMenu implements Initializable {
 
     @FXML
     void goToNoteBook(ActionEvent event) {
-
+        sceneLoader.goToNoteBook(NotesMenuPane);
     }
 
     @FXML
