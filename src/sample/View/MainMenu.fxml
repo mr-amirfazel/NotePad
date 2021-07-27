@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane fx:id="mainMenuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainMenu">
+   <children>
+      <Button fx:id="signUpButton" layoutX="485.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="30.0" prefWidth="125.0" text="Sign Up" />
+      <Button layoutX="486.0" layoutY="258.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="125.0" text="Log In" />
+      <Pane fx:id="sidePane" layoutY="-1.0" prefHeight="450.0" prefWidth="376.0" />
+      <Label alignment="CENTER" layoutX="384.0" layoutY="21.0" prefHeight="56.0" prefWidth="328.0" text="ToDoList V.2" textFill="#0d3202">
+         <font>
+            <Font name="Impact" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="infoButton" layoutX="683.0" layoutY="407.0" minHeight="-Infinity" minWidth="38.0" mnemonicParsing="false" onAction="#goToInfo" prefHeight="30.0" prefWidth="38.0" text="i">
+         <font>
+            <Font name="Harrington" size="8.0" />
+         </font>
+         <padding>
+            <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+         </padding>
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
+      </Button>
+   </children>
+</Pane>
