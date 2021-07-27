@@ -39,7 +39,6 @@ public class SignUp {
 
     @FXML
     void signUpUser(ActionEvent event) {
-        stateLabel = new Label();
         if(passField.getText().equals(secPassField.getText()))
         {
             stateLabel.setText("sign Up was successful");

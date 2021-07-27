@@ -27,7 +27,12 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="goBackButton" layoutX="674.0" layoutY="411.0" mnemonicParsing="false" onAction="#goToMain" style="-fx-background-color: transparent; -fx-border-color: aqua;" text="goBack" />
+      <Button fx:id="goBackButton" layoutX="365.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToMain" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: transparent; -fx-border-color: aqua;" text="goBack" />
+      <Label fx:id="stateLabel" alignment="CENTER" layoutX="365.0" layoutY="397.0" prefHeight="46.0" prefWidth="374.0" textFill="#3b006b">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
    <stylesheets>
       <URL value="@Styles/SignUp.css" />
