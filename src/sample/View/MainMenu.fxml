@@ -7,12 +7,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane fx:id="mainMenuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainMenu">
    <children>
       <Button fx:id="signUpButton" layoutX="485.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="30.0" prefWidth="125.0" text="Sign Up" />
-      <Button layoutX="486.0" layoutY="258.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="125.0" text="Log In" />
-      <Pane fx:id="sidePane" layoutY="-1.0" prefHeight="450.0" prefWidth="376.0" />
+      <Button fx:id="logInButton" layoutX="486.0" layoutY="258.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="125.0" text="Log In" />
+      <Pane id="sidePane" layoutX="-45.0" layoutY="-46.0" prefHeight="495.0" prefWidth="421.0" stylesheets="@Styles/MainMenu.css" />
       <Label alignment="CENTER" layoutX="384.0" layoutY="21.0" prefHeight="56.0" prefWidth="328.0" text="ToDoList V.2" textFill="#0d3202">
          <font>
             <Font name="Impact" size="29.0" />

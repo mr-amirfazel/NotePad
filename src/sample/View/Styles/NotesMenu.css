@@ -1,0 +1,33 @@
+#NotesMenuPane
+{
+    -fx-background-color: linear-gradient(to bottom, rgba(22,131,40,1) 0%, rgba(133,244,104,1) 100%);
+}
+#NotesHBox,#StarredNotesHBox,#CheckedNotesHBox
+{
+    -fx-border-radius: 7%;
+    -fx-border-color: #a02804;
+}
+#GoBackButton ,#settingButton ,#myNoteBookButton
+{
+    -fx-background-color: linear-gradient(to right, rgba(246,22,3,1) 0%, rgba(240,7,181,1) 100%);
+    -fx-text-fill: #41d176;
+    -fx-font-size: 25px;
+    -fx-font-family: "Franklin Gothic Medium";
+    -fx-border-radius: 50%;
+}
+#GoBackButton:hover ,#settingButton:hover ,#myNoteBookButton:hover
+{
+    -fx-text-fill: #ef12ec;
+}
+#profileBox
+{
+    -fx-border-radius: 15%;
+    -fx-border-color: #8bb847;
+    -fx-border-width: 5px;
+}
+#profileBox:hover
+{
+    -fx-border-radius: 10%;
+    -fx-border-color: #fd0000;
+    -fx-border-width: 8px;
+}
