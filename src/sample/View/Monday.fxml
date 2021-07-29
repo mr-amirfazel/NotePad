@@ -8,11 +8,15 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="MondayBG" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Days.Monday">
+<AnchorPane fx:id="MondayBG" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/Monday.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Days.Monday">
    <children>
       <VBox layoutX="643.0" prefHeight="450.0" prefWidth="97.0">
          <children>
-            <Button fx:id="addNoteMonday" mnemonicParsing="false" onAction="#ComposeNoteMonday" prefHeight="80.0" prefWidth="99.0" text="Button" />
+            <Button fx:id="addNoteMonday" mnemonicParsing="false" onAction="#ComposeNoteMonday" prefHeight="80.0" prefWidth="99.0" text="+">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Button>
          </children>
       </VBox>
       <FlowPane fx:id="MondayList" layoutX="8.0" layoutY="66.0" prefHeight="381.0" prefWidth="572.0" />
