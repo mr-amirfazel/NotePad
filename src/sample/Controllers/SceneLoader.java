@@ -16,85 +16,62 @@ public class SceneLoader {
     private Scene scene;
     private Parent root;
 
+    private String fxmlFile = "../View/";
+    private String cssFile ="../View/Styles/";
+    private String title;
+
     public SceneLoader() { }
 
     public void goToSignUpPage(Pane pane)
     {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../View/SignUp.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage = (Stage) pane.getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("../View/Styles/SignUp.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setTitle("Sign Up");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        fxmlFile+="SignUp.fxml";
+        cssFile+="SignUp.css";
+        title ="Sign Up";
+        redirectPage(pane);
     }
     public void goToMainMenu(Pane pane)
     {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage = (Stage) pane.getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("../View/Styles/MainMenu.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setTitle("Welcome");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        fxmlFile+="MainMenu.fxml";
+        cssFile+="MainMenu.css";
+        title ="Welcome";
+        redirectPage(pane);
     }
     public void goToLogIn(Pane pane)
     {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../View/LogIn.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage = (Stage) pane.getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("../View/Styles/LogIn.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setTitle("LogIn");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        fxmlFile+="LogIn.fxml";
+        cssFile+="LogIn.css";
+        title ="LogIn";
+        redirectPage(pane);
+
     }
     public void goToNotesMenu(Pane pane)
     {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../View/NotesMenu.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage = (Stage) pane.getScene().getWindow();
-        scene = new Scene(root);
-        String css = this.getClass().getResource("../View/Styles/NotesMenu.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setTitle("Notes Menu");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        fxmlFile+="NotesMenu.fxml";
+        cssFile+="NotesMenu.css";
+        title ="Notes Menu";
+        redirectPage(pane);
     }
     public void goToNoteBook(Pane pane)
     {
+        fxmlFile+="NoteBook.fxml";
+        cssFile+="NoteBook.css";
+        title ="Note Book";
+        redirectPage(pane);
+    }
+
+
+    private void redirectPage(Pane pane)
+    {
         try {
-            root = FXMLLoader.load(getClass().getResource("../View/NoteBook.fxml"));
+            root = FXMLLoader.load(getClass().getResource(fxmlFile));
         } catch (IOException e) {
             e.printStackTrace();
         }
         stage = (Stage) pane.getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("../View/Styles/NoteBook.css").toExternalForm();
+        String css = this.getClass().getResource(cssFile).toExternalForm();
         scene.getStylesheets().add(css);
-        stage.setTitle("Note Book");
+        stage.setTitle(title);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
