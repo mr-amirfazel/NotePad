@@ -1,45 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controllers.NoteBookController">
-  <tabs>
-    <Tab text="Monday">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-      </content>
-    </Tab>
-    <Tab text="Tuesday">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-      </content>
-    </Tab>
-      <Tab text="Thursday">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-      <Tab text="Friday">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-      <Tab text="Saturday">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-      <Tab text="Sunday">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-      <Tab text="Wednesday">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-  </tabs>
-</TabPane>
+<GridPane fx:id="NoteBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/NoteBook.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controllers.NoteBookController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="MondayButton" mnemonicParsing="false" onAction="#goToMondayList" prefHeight="113.0" prefWidth="416.0" text="Monday">
+         <font>
+            <Font name="Aldhabi" size="37.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="sundayButton" mnemonicParsing="false" onAction="#gotoSundayList" prefHeight="55.0" prefWidth="370.0" text="Sunday" GridPane.rowIndex="3">
+         <font>
+            <Font name="Aldhabi" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="saturdayButton" mnemonicParsing="false" onAction="#goToSaturdayList" prefHeight="113.0" prefWidth="416.0" text="Saturday" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Corbel Light Italic" size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="fridayButton" mnemonicParsing="false" onAction="#goToFridayList" prefHeight="113.0" prefWidth="416.0" text="Friday" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arabic Typesetting" size="32.0" />
+         </font>
+      </Button>
+      <Button fx:id="thursdayButton" mnemonicParsing="false" onAction="#goToThursdayList" prefHeight="113.0" prefWidth="416.0" text="Thursday" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Aldhabi" size="34.0" />
+         </font>
+      </Button>
+      <Button fx:id="wednesdayButton" mnemonicParsing="false" onAction="#goToWednesdayList" prefHeight="113.0" prefWidth="416.0" text="Wednesday" GridPane.rowIndex="1">
+         <font>
+            <Font name="Candara" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="tuesdayButton" mnemonicParsing="false" onAction="#goToTuesdayList" prefHeight="113.0" prefWidth="416.0" text="Tuesday" GridPane.columnIndex="1">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Button fx:id="redirectB" mnemonicParsing="false" onAction="#gotoMenu" prefHeight="113.0" prefWidth="374.0" text="GO BACK" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</GridPane>

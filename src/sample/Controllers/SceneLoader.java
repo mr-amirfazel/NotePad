@@ -32,6 +32,7 @@ public class SceneLoader {
         scene.getStylesheets().add(css);
         stage.setTitle("Sign Up");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     public void goToMainMenu(Pane pane)
@@ -47,6 +48,7 @@ public class SceneLoader {
         scene.getStylesheets().add(css);
         stage.setTitle("Welcome");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     public void goToLogIn(Pane pane)
@@ -62,6 +64,7 @@ public class SceneLoader {
         scene.getStylesheets().add(css);
         stage.setTitle("LogIn");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     public void goToNotesMenu(Pane pane)
@@ -77,6 +80,7 @@ public class SceneLoader {
         scene.getStylesheets().add(css);
         stage.setTitle("Notes Menu");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     public void goToNoteBook(Pane pane)
@@ -92,6 +96,7 @@ public class SceneLoader {
         scene.getStylesheets().add(css);
         stage.setTitle("Note Book");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

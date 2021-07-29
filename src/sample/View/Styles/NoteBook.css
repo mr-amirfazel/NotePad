@@ -1,0 +1,14 @@
+#NoteBook
+{
+    -fx-background-color: linear-gradient(to bottom, rgba(22,131,40,1) 0%, rgba(133,244,104,1) 100%);
+}
+#MondayButton , #tuesdayButton , #wednesdayButton , #thursdayButton , #fridayButton , #saturdayButton , #sundayButton ,#redirectB
+{
+    -fx-text-fill: #4086f7;
+    -fx-background-color: linear-gradient(to right, rgba(67,15,92,1) 0%, rgba(56,3,136,1) 100%);;
+}
+#MondayButton:hover , #tuesdayButton:hover, #wednesdayButton:hover , #thursdayButton:hover , #fridayButton:hover , #saturdayButton:hover , #sundayButton:hover ,#redirectB:hover
+{
+    -fx-text-fill: #40bdf7;
+    -fx-background-color: linear-gradient(to left, rgba(67,15,92,1) 0%, rgba(56,3,136,1) 100%);;
+}
