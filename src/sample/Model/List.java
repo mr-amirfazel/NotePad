@@ -8,4 +8,8 @@ public class List {
     public List() {
         notes = new ArrayList<>();
     }
+
+    public ArrayList<Note> getNotes() {
+        return notes;
+    }
 }

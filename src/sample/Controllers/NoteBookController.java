@@ -7,6 +7,8 @@ import javafx.scene.layout.GridPane;
 
 public class NoteBookController {
 
+    private SceneLoader sceneLoader = new SceneLoader();
+
     @FXML
     private GridPane NoteBook;
 
@@ -41,7 +43,7 @@ public class NoteBookController {
 
     @FXML
     void goToMondayList(ActionEvent event) {
-
+        sceneLoader.goToMonday(NoteBook);
     }
 
     @FXML
