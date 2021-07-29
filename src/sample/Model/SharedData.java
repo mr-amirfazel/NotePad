@@ -17,4 +17,6 @@ public class SharedData {
         return sharedData;
     }
     public User user;
+    public Note note;
+    public WeekDay weekDay;
 }

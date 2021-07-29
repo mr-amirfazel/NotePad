@@ -65,6 +65,13 @@ public class SceneLoader {
         title ="Monday";
         redirectPage(pane);
     }
+    public void viewNote(Pane pane)
+    {
+//        fxmlFile+="Monday.fxml";
+//        cssFile+="Monday.css";
+//        title ="Monday";
+//        redirectPage(pane);
+    }
 
 
     private void redirectPage(Pane pane)

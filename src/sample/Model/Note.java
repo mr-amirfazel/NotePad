@@ -1,10 +1,40 @@
 package sample.Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Note {
     private String note;
     private boolean isChecked;
-    private Date publishDate;
+    private boolean isStarred;
+    private LocalDate publishDate;
     private String title;
+
+    public Note(String note, String title) {
+        this.note = note;
+        this.title = title;
+        isChecked = false;
+        isStarred = false;
+        publishDate = java.time.LocalDate.now();
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public boolean isStarred() {
+        return isStarred;
+    }
+
+    public LocalDate getPublishDate() {
+        return publishDate;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

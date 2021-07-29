@@ -1,20 +1,28 @@
 package sample.Controllers.Days;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import sample.Controllers.SceneLoader;
+import sample.Model.Note;
 import sample.Model.SharedData;
 import sample.Model.User;
+import sample.Model.WeekDay;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Monday implements Initializable {
     private SharedData sharedData = SharedData.getInstance();
     private User user = sharedData.user;
+    private SceneLoader  sceneLoader = new SceneLoader();
 
     @FXML
     private AnchorPane MondayBG;
@@ -32,6 +40,20 @@ public class Monday implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        sharedData.weekDay = WeekDay.MONDAY;
+      ArrayList<Note> notes = user.getNoteBook().getLists()[0].getNotes();
+      for (Note note:notes)
+      {
+          Button button = new Button(note.getNote());
+          button.setPrefWidth(MondayList.getPrefWidth()*0.25);
+          button.setOnMouseClicked(new EventHandler<MouseEvent>() {
+              @Override
+              public void handle(MouseEvent mouseEvent) {
+                  sharedData.note = note;
+                  sceneLoader.viewNote(MondayBG);
+              }
+          });
+          MondayList.getChildren().add(button);
+      }
     }
 }
