@@ -58,6 +58,13 @@ public class SceneLoader {
         title ="Note Book";
         redirectPage(pane);
     }
+    public void goToMonday(Pane pane)
+    {
+        fxmlFile+="Monday.fxml";
+        cssFile+="Monday.css";
+        title ="Monday";
+        redirectPage(pane);
+    }
 
 
     private void redirectPage(Pane pane)

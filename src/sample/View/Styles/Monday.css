@@ -1,0 +1,17 @@
+#MondayBG
+{
+    -fx-background-color: #0b0eba;
+}
+#MondayList
+{
+    -fx-border-color: #fa6e1b;
+    -fx-border-radius: 2%;
+    -fx-border-width: 4px;
+}
+#addNoteMonday
+{
+    -fx-text-fill: #25f5f1;
+    -fx-background-color: #6121ba;
+    -fx-border-color: black;
+    -fx-border-width: 0.8px;
+}

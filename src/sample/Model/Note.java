@@ -6,4 +6,5 @@ public class Note {
     private String note;
     private boolean isChecked;
     private Date publishDate;
+    private String title;
 }

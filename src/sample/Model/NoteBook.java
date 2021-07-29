@@ -7,5 +7,10 @@ public class NoteBook {
 
     public NoteBook() {
         lists = new List[7];
+
+    }
+
+    public List[] getLists() {
+        return lists;
     }
 }
