@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="noteCompose" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NoteCompose">
+<AnchorPane fx:id="noteCompose" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/NoteCompose.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NoteCompose">
    <children>
       <TextField fx:id="titleField" layoutX="14.0" layoutY="43.0" prefHeight="26.0" prefWidth="228.0" promptText="enter title here!">
          <font>
@@ -34,7 +35,7 @@
       </TextArea>
       <VBox layoutX="626.0" layoutY="173.0" prefHeight="210.0" prefWidth="107.0">
          <children>
-            <ImageView fitHeight="118.0" fitWidth="107.0" onMouseClicked="#goToDay" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="115.0" fitWidth="109.0" onMouseClicked="#goToDay" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/goBack.png" />
                </image>
@@ -45,6 +46,9 @@
                </image>
             </ImageView>
          </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </VBox>
    </children>
 </AnchorPane>

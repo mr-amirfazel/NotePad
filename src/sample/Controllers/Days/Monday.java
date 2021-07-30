@@ -39,6 +39,12 @@ public class Monday implements Initializable {
         sceneLoader.addNote(MondayBG);
     }
 
+    @FXML
+    void ToMenu(MouseEvent event) {
+        sceneLoader.goToNotesMenu(MondayBG);
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sharedData.weekDay = WeekDay.MONDAY;
