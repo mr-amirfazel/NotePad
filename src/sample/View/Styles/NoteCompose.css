@@ -1,0 +1,9 @@
+#noteCompose
+{
+    -fx-background-image: url(../Images/wood.jpg);
+}
+#titleField ,#noteField
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent midnightblue transparent;
+}
