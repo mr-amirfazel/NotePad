@@ -36,7 +36,7 @@ public class Monday implements Initializable {
 
     @FXML
     void ComposeNoteMonday(ActionEvent event) {
-
+        sceneLoader.addNote(MondayBG);
     }
 
     @Override

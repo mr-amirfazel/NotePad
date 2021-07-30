@@ -72,6 +72,13 @@ public class SceneLoader {
         title ="Note Viewer";
         redirectPage(pane);
     }
+    public void addNote(Pane pane)
+    {
+        fxmlFile+="NoteCompose.fxml";
+        cssFile+="NoteCompose.css";
+        title ="Compose new Note";
+        redirectPage(pane);
+    }
 
 
     private void redirectPage(Pane pane)

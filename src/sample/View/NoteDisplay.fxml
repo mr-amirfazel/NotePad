@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="noteDisplay" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NoteDisplayController">
    <children>
-      <Label fx:id="titlelabel" alignment="CENTER" layoutX="254.0" prefHeight="84.0" prefWidth="204.0" text="Label">
+      <Label fx:id="titlelabel" alignment="CENTER" layoutX="41.0" prefHeight="84.0" prefWidth="618.0" text="Label">
          <font>
             <Font name="Andalus" size="45.0" />
          </font>
