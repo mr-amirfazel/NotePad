@@ -67,10 +67,10 @@ public class SceneLoader {
     }
     public void viewNote(Pane pane)
     {
-//        fxmlFile+="Monday.fxml";
-//        cssFile+="Monday.css";
-//        title ="Monday";
-//        redirectPage(pane);
+        fxmlFile+="NoteDisplay.fxml";
+        cssFile+="NoteDisplay.css";
+        title ="Note Viewer";
+        redirectPage(pane);
     }
 
 
@@ -83,8 +83,10 @@ public class SceneLoader {
         }
         stage = (Stage) pane.getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource(cssFile).toExternalForm();
-        scene.getStylesheets().add(css);
+        if(cssFile!=null) {
+            String css = this.getClass().getResource(cssFile).toExternalForm();
+            scene.getStylesheets().add(css);
+        }
         stage.setTitle(title);
         stage.setScene(scene);
         stage.setResizable(false);

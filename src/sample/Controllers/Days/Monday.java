@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
@@ -44,8 +45,13 @@ public class Monday implements Initializable {
       ArrayList<Note> notes = user.getNoteBook().getLists()[0].getNotes();
       for (Note note:notes)
       {
-          Button button = new Button(note.getNote());
+          Button button = new Button(note.getTitle());
           button.setPrefWidth(MondayList.getPrefWidth()*0.25);
+          button.setPrefHeight(60);
+          button.setStyle("-fx-background-color: #6B8E23;" +
+                  "-fx-text-fill: #F4A460;" +
+                  "-fx-font-size: 16px");
+          button.setCursor(Cursor.HAND);
           button.setOnMouseClicked(new EventHandler<MouseEvent>() {
               @Override
               public void handle(MouseEvent mouseEvent) {
