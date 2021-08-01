@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import sample.Model.Note;
 import sample.Model.SharedData;
 import sample.Model.User;
 
@@ -77,6 +78,23 @@ public class NotesMenu implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Image image = new Image("pfp.jpg");
         profileHolder.setFill(new ImagePattern(image));
+        setLabels();
 
+    }
+    private void setLabels()
+    {
+        notes.setText(notesCount()+"");
+    }
+    private int notesCount()
+    {
+        int i =0;
+        for (int counter =0;counter<7;counter++)
+        {
+            for (Note note:SharedData.getInstance().user.getNoteBook().getLists()[counter].getNotes())
+            {
+                i++;
+            }
+        }
+        return i;
     }
 }
