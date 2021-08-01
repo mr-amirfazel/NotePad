@@ -24,7 +24,7 @@ public class NoteDisplayController implements Initializable {
 
     @FXML
     void goToNoteBook(MouseEvent event) {
-            new PageManager().goToDay(noteDisplay);
+            new SceneLoader().goToDayList(noteDisplay);
     }
 
     @Override

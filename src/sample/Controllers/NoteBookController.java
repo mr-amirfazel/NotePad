@@ -4,10 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
+import sample.Model.SharedData;
+import sample.Model.WeekDay;
 
 public class NoteBookController {
 
     private SceneLoader sceneLoader = new SceneLoader();
+    private SharedData sharedData = SharedData.getInstance();
 
     @FXML
     private GridPane NoteBook;
@@ -38,32 +41,38 @@ public class NoteBookController {
 
     @FXML
     void goToFridayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.FRIDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToMondayList(ActionEvent event) {
-        sceneLoader.goToMonday(NoteBook);
+        sharedData.weekDay = WeekDay.MONDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToSaturdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.SATURDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToThursdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.THURSDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToTuesdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.TUESDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToWednesdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.WEDNESDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
@@ -73,7 +82,8 @@ public class NoteBookController {
 
     @FXML
     void gotoSundayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.SUNDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
 }

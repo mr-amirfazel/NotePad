@@ -21,7 +21,7 @@ public class NoteCompose {
 
     @FXML
     void goToDay(MouseEvent event) {
-        new PageManager().goToDay(noteCompose);
+        new SceneLoader().goToDayList(noteCompose);
     }
 
     @FXML

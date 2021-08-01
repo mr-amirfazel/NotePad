@@ -1,0 +1,23 @@
+#DayListBG
+{
+    -fx-background-image: url(../Images/wood.jpg);
+}
+#dayNotes
+{
+    -fx-border-color: #d91b04;
+    -fx-border-radius: 2%;
+    -fx-border-width: 4px;
+}
+#addNote
+{
+    -fx-text-fill: #25f5f1;
+    -fx-background-color: #6121ba;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+#dayNameLabel
+{
+    -fx-text-fill: #0f4502;
+    -fx-font-size: 35px;
+    -fx-font-family: "Franklin Gothic Medium";
+}

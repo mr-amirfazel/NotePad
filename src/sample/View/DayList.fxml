@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="DayListBG" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/DayList.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.DayList">
+   <children>
+      <Label fx:id="dayNameLabel" layoutX="14.0" layoutY="14.0" prefHeight="90.0" prefWidth="580.0" text="Label" />
+      <FlowPane fx:id="dayNotes" layoutX="14.0" layoutY="104.0" prefHeight="338.0" prefWidth="580.0" />
+      <VBox fx:id="sideList" layoutX="646.0" prefHeight="454.0" prefWidth="95.0">
+         <children>
+            <Button fx:id="addNote" mnemonicParsing="false" onAction="#composeNewNote" prefHeight="86.0" prefWidth="102.0" text="+">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="95.0" fitWidth="100.0" onMouseClicked="#redirectToNoteBook" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/goBack.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </VBox>
+   </children>
+</AnchorPane>

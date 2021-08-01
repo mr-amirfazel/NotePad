@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.Model.SharedData;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -63,6 +64,13 @@ public class SceneLoader {
         fxmlFile+="Monday.fxml";
         cssFile+="Monday.css";
         title ="Monday";
+        redirectPage(pane);
+    }
+    public void goToDayList(Pane pane)
+    {
+        fxmlFile+="DayList.fxml";
+        cssFile+="DayList.css";
+        title = SharedData.getInstance().weekDay+"";
         redirectPage(pane);
     }
     public void viewNote(Pane pane)
