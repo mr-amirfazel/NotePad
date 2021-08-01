@@ -41,7 +41,8 @@ public class NoteBookController {
 
     @FXML
     void goToFridayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.FRIDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
@@ -52,22 +53,26 @@ public class NoteBookController {
 
     @FXML
     void goToSaturdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.SATURDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToThursdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.THURSDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToTuesdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.TUESDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
     void goToWednesdayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.WEDNESDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
     @FXML
@@ -77,7 +82,8 @@ public class NoteBookController {
 
     @FXML
     void gotoSundayList(ActionEvent event) {
-
+        sharedData.weekDay = WeekDay.SUNDAY;
+        sceneLoader.goToDayList(NoteBook);
     }
 
 }

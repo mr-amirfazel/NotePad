@@ -1,15 +1,10 @@
 package sample.Controllers;
 
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+
 import sample.Model.SharedData;
 import sample.Model.WeekDay;
 
 public class PageManager {
-    private WeekDay weekDay;
-    private SceneLoader sceneLoader = new SceneLoader();
-
-
     int getIndex()
     {
         int i =0;
