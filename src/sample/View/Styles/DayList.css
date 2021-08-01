@@ -13,11 +13,12 @@
     -fx-text-fill: #25f5f1;
     -fx-background-color: #6121ba;
     -fx-border-color: black;
-    -fx-border-width: 1px;
+    -fx-border-width: 0.8px;
 }
 #dayNameLabel
 {
-    -fx-text-fill: #0f4502;
-    -fx-font-size: 35px;
+    -fx-text-fill: #063801;
+    -fx-font-size: 35;
     -fx-font-family: "Franklin Gothic Medium";
+
 }
