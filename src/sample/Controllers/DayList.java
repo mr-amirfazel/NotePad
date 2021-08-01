@@ -40,7 +40,7 @@ public class DayList implements Initializable {
 
     @FXML
     void redirectToNoteBook(MouseEvent event) {
-        sceneLoader.goToNotesMenu(DayListBG);
+        sceneLoader.goToNoteBook(DayListBG);
     }
     @FXML
     void composeNewNote(ActionEvent event) {
@@ -51,7 +51,7 @@ public class DayList implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         SharedData sharedData = SharedData.getInstance();
         User user = sharedData.user;
-        dayNameLabel.setText(sharedData.weekDay +"'s Sheet :)");
+        dayNameLabel.setText(sharedData.weekDay +" 's Sheet :)");
         ArrayList<Note> notes = user.getNoteBook().getLists()[new PageManager().getIndex()].getNotes();
         for (Note note:notes)
         {

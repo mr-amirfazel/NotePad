@@ -13,7 +13,7 @@
 
 <AnchorPane fx:id="DayListBG" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/DayList.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.DayList">
    <children>
-      <Label fx:id="dayNameLabel" layoutX="14.0" layoutY="14.0" prefHeight="90.0" prefWidth="295.0" text="Label" />
+      <Label fx:id="dayNameLabel" layoutX="14.0" layoutY="14.0" prefHeight="90.0" prefWidth="580.0" text="Label" />
       <FlowPane fx:id="dayNotes" layoutX="14.0" layoutY="104.0" prefHeight="338.0" prefWidth="580.0" />
       <VBox fx:id="sideList" layoutX="646.0" prefHeight="454.0" prefWidth="95.0">
          <children>
