@@ -1,19 +1,16 @@
 package sample.Controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import sample.Model.SharedData;
+import sample.Model.FileUtils;
 import sample.Model.User;
 
 public class SignUp {
     private final SceneLoader sceneLoader = new SceneLoader();
-    private SharedData sharedData = SharedData.getInstance();
 
     @FXML
     private Pane SignUpPane;
@@ -41,11 +38,17 @@ public class SignUp {
     }
 
     @FXML
-    void signUpUser(ActionEvent event) {
+    void signUpUser() {
+        FileUtils fileUtils = new FileUtils();
         if(passField.getText().equals(secPassField.getText()))
         {
-            stateLabel.setText("sign Up was successful");
-            sharedData.user = new User(usernameField.getText(), passField.getText());
+            if(!fileUtils.userExist(usernameField.getText())) {
+                stateLabel.setText("sign Up was successful");
+                fileUtils.savePlayer(new User(usernameField.getText(), passField.getText()));
+            }
+            else
+                stateLabel.setText("this user already exist");
+
         }
         else
             stateLabel.setText("password fields doesnt match :(");

@@ -1,8 +1,9 @@
 package sample.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class List {
+public class List implements Serializable {
     private ArrayList<Note> notes;
 
     public List() {

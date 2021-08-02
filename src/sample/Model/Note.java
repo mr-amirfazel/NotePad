@@ -1,9 +1,10 @@
 package sample.Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 
-public class Note {
+public class Note implements Serializable {
     private String note;
     private boolean isChecked;
     private boolean isStarred;

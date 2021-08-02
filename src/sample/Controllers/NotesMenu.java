@@ -17,11 +17,10 @@ import sample.Model.User;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.function.IntBinaryOperator;
 
 public class NotesMenu implements Initializable {
-    private SceneLoader sceneLoader = new SceneLoader();
-    private User user = SharedData.getInstance().user;
+    private final SceneLoader sceneLoader = new SceneLoader();
+    private final User user = SharedData.getInstance().user;
 
     @FXML
     private Pane NotesMenuPane;
@@ -90,7 +89,7 @@ public class NotesMenu implements Initializable {
         int i =0;
         for (int counter =0;counter<7;counter++)
         {
-            for (Note note:SharedData.getInstance().user.getNoteBook().getLists()[counter].getNotes())
+            for (Note ignored :user.getNoteBook().getLists()[counter].getNotes())
             {
                 i++;
             }

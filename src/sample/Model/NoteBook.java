@@ -1,8 +1,9 @@
 package sample.Model;
 
 
+import java.io.Serializable;
 
-public class NoteBook {
+public class NoteBook implements Serializable {
     private List[] lists;
 
     public NoteBook() {

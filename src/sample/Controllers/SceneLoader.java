@@ -1,21 +1,16 @@
 package sample.Controllers;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sample.Model.SharedData;
-
-import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.Objects;
 
 public class SceneLoader {
-    private Stage stage;
-    private Scene scene;
     private Parent root;
 
     private String fxmlFile = "../View/";
@@ -60,14 +55,7 @@ public class SceneLoader {
         title ="Note Book";
         redirectPage(pane);
     }
-    public void goToMonday(Pane pane)
-    {
-        fxmlFile+="Monday.fxml";
-        cssFile+="Monday.css";
-        title ="Monday";
-        redirectPage(pane);
-    }
-    public void goToDayList(Pane pane)
+     public void goToDayList(Pane pane)
     {
         fxmlFile+="DayList.fxml";
         cssFile+="DayList.css";
@@ -93,14 +81,14 @@ public class SceneLoader {
     private void redirectPage(Pane pane)
     {
         try {
-            root = FXMLLoader.load(getClass().getResource(fxmlFile));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFile)));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = (Stage) pane.getScene().getWindow();
-        scene = new Scene(root);
+        Stage stage = (Stage) pane.getScene().getWindow();
+        Scene scene = new Scene(root);
         if(cssFile!=null) {
-            String css = this.getClass().getResource(cssFile).toExternalForm();
+            String css = Objects.requireNonNull(this.getClass().getResource(cssFile)).toExternalForm();
             scene.getStylesheets().add(css);
         }
         stage.setTitle(title);
