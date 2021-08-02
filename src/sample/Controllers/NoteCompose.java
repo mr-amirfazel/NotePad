@@ -27,31 +27,10 @@ public class NoteCompose {
 
     @FXML
     void saveNote(MouseEvent event) {
-        int i =getIndex();
+        int i =new PageManager().getIndex();
         SharedData.getInstance().user.getNoteBook().getLists()[i].getNotes().add(new Note(noteField.getText(),titleField.getText()));
         new FileUtils().savePlayer(SharedData.getInstance().user);
     }
 
-    int getIndex()
-    {
-        int i =0;
-        WeekDay weekDay = SharedData.getInstance().weekDay;
-        if(weekDay == WeekDay.MONDAY)
-            i = 0;
-        else if(weekDay == WeekDay.TUESDAY)
-            i=1;
-        else if(weekDay==WeekDay.WEDNESDAY)
-            i =2;
-        else if(weekDay==WeekDay.THURSDAY)
-            i =3;
-        else if(weekDay==WeekDay.FRIDAY)
-            i =4;
-        else if(weekDay==WeekDay.SATURDAY)
-            i =5;
-        else if(weekDay==WeekDay.SUNDAY)
-            i =6;
-
-       return i;
-    }
 
 }

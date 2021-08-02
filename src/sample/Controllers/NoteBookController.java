@@ -9,8 +9,8 @@ import sample.Model.WeekDay;
 
 public class NoteBookController {
 
-    private SceneLoader sceneLoader = new SceneLoader();
-    private SharedData sharedData = SharedData.getInstance();
+    private final SceneLoader sceneLoader = new SceneLoader();
+    private final SharedData sharedData = SharedData.getInstance();
 
     @FXML
     private GridPane NoteBook;

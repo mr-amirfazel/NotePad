@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="noteDisplay" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NoteDisplayController">
+<AnchorPane fx:id="noteDisplay" prefHeight="450.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NoteDisplayController">
    <children>
       <Label fx:id="titlelabel" alignment="CENTER" layoutX="41.0" prefHeight="84.0" prefWidth="618.0" text="Label">
          <font>
@@ -19,13 +18,24 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView fitHeight="63.0" fitWidth="62.0" layoutX="678.0" onMouseClicked="#goToNoteBook" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/goBack.png" />
-         </image>
+      <VBox layoutX="668.0" prefHeight="450.0" prefWidth="73.0">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="70.0" onMouseClicked="#goToNoteBook" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/goBack.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="69.0" onMouseClicked="#deleteNote" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/del.png" />
+               </image>
+            </ImageView>
+         </children>
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
+         </cursor></VBox>
    </children>
 </AnchorPane>
