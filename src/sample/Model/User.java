@@ -24,4 +24,5 @@ public class User implements Serializable {
     public NoteBook getNoteBook() {
         return noteBook;
     }
+
 }

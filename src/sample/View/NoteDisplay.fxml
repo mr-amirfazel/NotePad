@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -28,6 +29,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <ImageView fx:id="starState" fitHeight="61.0" fitWidth="71.0" onMouseClicked="#starUnStar" pickOnBounds="true" preserveRatio="true" />
+            <CheckBox fx:id="checkState" mnemonicParsing="false" onAction="#checkNote" prefHeight="55.0" prefWidth="72.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="29.0" />
+               </padding>
+            </CheckBox>
             <ImageView fitHeight="73.0" fitWidth="69.0" onMouseClicked="#deleteNote" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/del.png" />

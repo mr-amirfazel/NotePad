@@ -83,7 +83,36 @@ public class NotesMenu implements Initializable {
     private void setLabels()
     {
         notes.setText(notesCount()+"");
+        starredNotes.setText(starredCount()+"");
+        checkedNotes.setText(checkedCount()+"");
     }
+
+    private int checkedCount() {
+        int i =0;
+        for (int counter =0;counter<7;counter++)
+        {
+            for (Note note :user.getNoteBook().getLists()[counter].getNotes())
+            {
+               if (note.isChecked())
+                   i++;
+            }
+        }
+        return i;
+    }
+
+    private int starredCount() {
+        int i =0;
+        for (int counter =0;counter<7;counter++)
+        {
+            for (Note note :user.getNoteBook().getLists()[counter].getNotes())
+            {
+                if (note.isStarred())
+                    i++;
+            }
+        }
+        return i;
+    }
+
     private int notesCount()
     {
         int i =0;

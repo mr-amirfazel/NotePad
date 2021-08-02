@@ -38,4 +38,12 @@ public class Note implements Serializable {
     public String getTitle() {
         return title;
     }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
+
+    public void setStarred(boolean starred) {
+        isStarred = starred;
+    }
 }
