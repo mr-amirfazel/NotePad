@@ -1,17 +1,26 @@
 package sample.Controllers;
 
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import sample.Model.FileUtils;
 import sample.Model.SharedData;
 import sample.Model.User;
 
-public class LogIn {
+import java.net.URL;
+import java.util.EventListener;
+import java.util.ResourceBundle;
+
+public class LogIn  {
     private final SceneLoader sceneLoader = new SceneLoader();
 
     @FXML
@@ -42,20 +51,26 @@ public class LogIn {
     void goToNotesMenu() {
 
         FileUtils fileUtils = new FileUtils();
-        if (fileUtils.userExist(LogInUserField.getText()))
-        {
+        if (fileUtils.userExist(LogInUserField.getText())) {
             User user = fileUtils.getUser(LogInUserField.getText());
             if (user.getPassword().equals(LogInPassField.getText())) {
                 SharedData.getInstance().user = user;
                 sceneLoader.goToNotesMenu(LogInPane);
-            }
-            else
+            } else
                 loginState.setText("Pass word doesnt match :(");
-        }
-        else
+        } else
             usernameLabel.setText("User does not exist!");
     }
 
-
-
+    @FXML
+    void lilTasks(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER)
+            goToNotesMenu();
+        else if (event.getCode() == KeyCode.ESCAPE)
+            goToMainMenu();
+    }
 }
+
+
+
+
