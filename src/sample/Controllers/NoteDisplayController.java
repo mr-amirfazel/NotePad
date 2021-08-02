@@ -113,8 +113,16 @@ public class NoteDisplayController implements Initializable {
             titlelabel.setText(sharedData.note.getTitle());
             noteTextLabel.setText(sharedData.note.getNote());
             setStar();
-
+            setCheck();
         }
+
+    private void setCheck() {
+        if (SharedData.getInstance().note.isChecked())
+          checkState.setSelected(true);
+        else
+            checkState.setSelected(false);
+
+    }
 
     private void setStar() {
         if (SharedData.getInstance().note.isStarred())
