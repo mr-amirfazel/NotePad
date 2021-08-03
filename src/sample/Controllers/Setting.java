@@ -9,19 +9,17 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import sample.Model.FileUtils;
 import sample.Model.List;
 import sample.Model.SharedData;
 import sample.Model.User;
 
 import java.io.File;
-import java.nio.file.Files;
 import java.util.Optional;
 
 public class Setting {
-    private SceneLoader sceneLoader = new SceneLoader();
-    private User user = SharedData.getInstance().user;
+    private final SceneLoader sceneLoader = new SceneLoader();
+    private final User user = SharedData.getInstance().user;
     @FXML
     private AnchorPane settingPane;
 
@@ -91,18 +89,7 @@ public class Setting {
         Optional<ButtonType> result = a.showAndWait();
         ButtonType button = result.orElse(ButtonType.CANCEL);
         if (button == ButtonType.OK) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            new SceneLoader().goToSetting(settingPane);
-                        }
-                    });
-                }
-            }).start();
+            new Thread(() -> Platform.runLater(() -> new SceneLoader().goToSetting(settingPane))).start();
         }
     }
 
@@ -111,10 +98,7 @@ public class Setting {
         a.setContentText("Are you Sure you want to delete all of your Notes?");
         Optional<ButtonType> result = a.showAndWait();
         ButtonType button = result.orElse(ButtonType.CANCEL);
-        if (button == ButtonType.OK) {
-            return true;
-        } else
-            return false;
+        return button == ButtonType.OK;
     }
 }
 
