@@ -1,0 +1,16 @@
+#settingPane
+{
+    -fx-background-color: linear-gradient(to bottom, rgba(99,244,144,1) 0%, rgba(17,92,51,1) 100%);
+}
+#removeNotes , #returnBtn , #profilePic , #myInfoButton
+{
+
+    -fx-background-color: linear-gradient(to right, #00DBDE 0%, #FC00FF 100%);
+    -fx-text-fill: #FFD700;
+}
+#removeNotes:hover, #returnBtn:hover
+, #profilePic:hover , #myInfoButton:hover
+{
+    -fx-background-color: linear-gradient(to left, #00DBDE 0%, #FC00FF 100%);
+    -fx-text-fill: #E52B50;
+}

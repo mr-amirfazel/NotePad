@@ -70,7 +70,7 @@ public class NotesMenu implements Initializable {
 
     @FXML
     void goToSetting(ActionEvent event) {
-
+        sceneLoader.goToSetting(NotesMenuPane);
     }
 
     @Override

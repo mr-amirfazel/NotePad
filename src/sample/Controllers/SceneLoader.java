@@ -76,6 +76,13 @@ public class SceneLoader {
         title ="Compose new Note";
         redirectPage(pane);
     }
+    public void goToSetting(Pane pane)
+    {
+        fxmlFile+="Setting.fxml";
+        cssFile+="Setting.css";
+        title ="User setting";
+        redirectPage(pane);
+    }
 
 
     private void redirectPage(Pane pane)

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="library" level="project" name="lib1" />
+      <element id="archive" name="NotePad" />
+      <element id="archive" name="NotePad V.2.jar">
+        <element id="module-output" name="NotePad V.2" />
+      </element>
+    </root>
+  </artifact>
+</component>
