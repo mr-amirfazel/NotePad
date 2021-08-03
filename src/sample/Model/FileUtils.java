@@ -1,6 +1,9 @@
 package sample.Model;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 
 public class FileUtils {
 
@@ -43,6 +46,21 @@ public class FileUtils {
             e.printStackTrace();
         }
         return  null;
+    }
+
+    public  static String copyProfilePic(Path source,String format)
+    {
+        User user = SharedData.getInstance().user;
+        File destination =new File("src/sample/View/Images/profilePics/"+user.getUsername()+"."+format) ;
+
+        try {
+            Files.copy(source,destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("utils done");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("utils "+ user.getUsername()+"."+format);
+        return user.getUsername()+"."+format;
     }
 
 }

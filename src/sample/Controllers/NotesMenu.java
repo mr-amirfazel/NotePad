@@ -75,7 +75,7 @@ public class NotesMenu implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image image = new Image("pfp.jpg");
+        Image image = new Image(user.getPfpPath());
         profileHolder.setFill(new ImagePattern(image));
         setLabels();
 
