@@ -8,7 +8,6 @@ import javafx.scene.layout.AnchorPane;
 import sample.Model.FileUtils;
 import sample.Model.Note;
 import sample.Model.SharedData;
-import sample.Model.WeekDay;
 
 public class NoteCompose {
 

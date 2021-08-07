@@ -1,11 +1,9 @@
 package sample.Controllers;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -21,7 +19,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class DayList implements Initializable {
-    private SceneLoader sceneLoader = new SceneLoader();
+    private final SceneLoader sceneLoader = new SceneLoader();
 
     @FXML
     private AnchorPane DayListBG;
@@ -62,12 +60,9 @@ public class DayList implements Initializable {
                     "-fx-text-fill: #F4A460;" +
                     "-fx-font-size: 16px");
             button.setCursor(Cursor.HAND);
-            button.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    sharedData.note = note;
-                    sceneLoader.viewNote(DayListBG);
-                }
+            button.setOnMouseClicked(mouseEvent -> {
+                sharedData.note = note;
+                sceneLoader.viewNote(DayListBG);
             });
             dayNotes.getChildren().add(button);
         }

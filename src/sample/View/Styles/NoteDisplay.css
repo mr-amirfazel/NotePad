@@ -2,7 +2,7 @@
 {
     -fx-background-image: url(../Images/wood.jpg);
 }
-#titlelabel
+#titleLabel
 {
     -fx-text-fill: #0303fc;
     -fx-background-color: linear-gradient(to right, rgba(80,232,138,1) 0%, rgba(0,255,2,1) 100%);

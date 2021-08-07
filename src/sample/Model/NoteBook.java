@@ -4,7 +4,7 @@ package sample.Model;
 import java.io.Serializable;
 
 public class NoteBook implements Serializable {
-    private List[] lists;
+    private final List[] lists;
 
     public NoteBook() {
         lists = new List[7];

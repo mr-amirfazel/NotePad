@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class List implements Serializable {
-    private ArrayList<Note> notes;
+    private final ArrayList<Note> notes;
 
     public List() {
         notes = new ArrayList<>();

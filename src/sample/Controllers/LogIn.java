@@ -1,10 +1,7 @@
 package sample.Controllers;
 
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -15,10 +12,6 @@ import javafx.scene.layout.Pane;
 import sample.Model.FileUtils;
 import sample.Model.SharedData;
 import sample.Model.User;
-
-import java.net.URL;
-import java.util.EventListener;
-import java.util.ResourceBundle;
 
 public class LogIn  {
     private final SceneLoader sceneLoader = new SceneLoader();

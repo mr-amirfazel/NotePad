@@ -22,10 +22,10 @@ import java.util.ResourceBundle;
 
 public class NoteDisplayController implements Initializable {
     private final SharedData sharedData = SharedData.getInstance();
-    private User user = sharedData.user;
+    private final User user = sharedData.user;
 
     @FXML
-    private Label titlelabel;
+    private Label titleLabel;
 
     @FXML
     private Label noteTextLabel;
@@ -40,10 +40,7 @@ public class NoteDisplayController implements Initializable {
 
     @FXML
     void starUnStar(MouseEvent event) {
-        if(sharedData.note.isStarred())
-            sharedData.note.setStarred(false);
-        else
-            sharedData.note.setStarred(true);
+        sharedData.note.setStarred(!sharedData.note.isStarred());
         setStar();
         new FileUtils().savePlayer(user);
 
@@ -65,10 +62,7 @@ public class NoteDisplayController implements Initializable {
 
     @FXML
     void checkNote(ActionEvent event) {
-        if(sharedData.note.isChecked())
-            sharedData.note.setChecked(false);
-        else
-            sharedData.note.setChecked(true);
+        sharedData.note.setChecked(!sharedData.note.isChecked());
         setStar();
         new FileUtils().savePlayer(user);
     }
@@ -79,18 +73,7 @@ public class NoteDisplayController implements Initializable {
         Optional<ButtonType> result = a.showAndWait();
         ButtonType button = result.orElse(ButtonType.CANCEL);
         if (button == ButtonType.OK) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            new SceneLoader().goToDayList(noteDisplay);
-                        }
-                    });
-                }
-            }).start();
+            new Thread(() -> Platform.runLater(() -> new SceneLoader().goToDayList(noteDisplay))).start();
         }
     }
 
@@ -99,28 +82,21 @@ public class NoteDisplayController implements Initializable {
         a.setContentText("Are you Sure you want to delete this note?");
         Optional<ButtonType> result = a.showAndWait();
         ButtonType button = result.orElse(ButtonType.CANCEL);
-        if (button == ButtonType.OK) {
-            return true;
-        }
-        else
-            return false;
+        return button == ButtonType.OK;
     }
 
 
 
     @Override
         public void initialize (URL url, ResourceBundle resourceBundle){
-            titlelabel.setText(sharedData.note.getTitle());
+            titleLabel.setText(sharedData.note.getTitle());
             noteTextLabel.setText(sharedData.note.getNote());
             setStar();
             setCheck();
         }
 
     private void setCheck() {
-        if (SharedData.getInstance().note.isChecked())
-          checkState.setSelected(true);
-        else
-            checkState.setSelected(false);
+        checkState.setSelected(SharedData.getInstance().note.isChecked());
 
     }
 

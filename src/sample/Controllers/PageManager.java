@@ -9,8 +9,9 @@ public class PageManager {
     {
         int i =0;
         WeekDay weekDay = SharedData.getInstance().weekDay;
-        if(weekDay == WeekDay.MONDAY)
-            i = 0;
+        if(weekDay == WeekDay.MONDAY) {
+            i=0;
+        }
         else if(weekDay == WeekDay.TUESDAY)
             i=1;
         else if(weekDay==WeekDay.WEDNESDAY)
