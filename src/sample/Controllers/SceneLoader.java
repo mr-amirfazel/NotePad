@@ -83,6 +83,13 @@ public class SceneLoader {
         title ="User setting";
         redirectPage(pane);
     }
+    public void goToInfo(Pane pane)
+    {
+        fxmlFile+="UserProfile.fxml";
+        cssFile+="Profile.css";
+        title ="User Profile";
+        redirectPage(pane);
+    }
 
 
     private void redirectPage(Pane pane)

@@ -43,17 +43,19 @@ public class Setting {
 
 
         File file = fileChooser.showOpenDialog(stage);
-        System.out.println(file.getAbsolutePath());
-        String[] fileSplit = file.getAbsolutePath().split("\\.");
-        String format = fileSplit[fileSplit.length-1];
-        System.out.println(format);
+        if(file != null) {
+            System.out.println(file.getAbsolutePath());
+            String[] fileSplit = file.getAbsolutePath().split("\\.");
+            String format = fileSplit[fileSplit.length - 1];
+            System.out.println(format);
 
-       String newProfilePath =  FileUtils.copyProfilePic(file.toPath(),format);
-        System.out.println("setting "+newProfilePath);
-       user.setPfpPath(newProfilePath);
+            String newProfilePath = FileUtils.copyProfilePic(file.toPath(), format);
+            System.out.println("setting " + newProfilePath);
+            user.setPfpPath(newProfilePath);
 
-       conFirmPicChange();
-        new FileUtils().savePlayer(user);
+            conFirmPicChange();
+            new FileUtils().savePlayer(user);
+        }
     }
 
     private void conFirmPicChange() {
@@ -80,7 +82,7 @@ public class Setting {
 
     @FXML
     void userInfo(ActionEvent event) {
-
+        sceneLoader.goToInfo(settingPane);
     }
 
     private void confirmDelete() {

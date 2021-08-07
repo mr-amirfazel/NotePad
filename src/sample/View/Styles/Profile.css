@@ -1,0 +1,15 @@
+#infoPane
+{
+    -fx-background-color: linear-gradient(to right, rgba(92,217,77,1) 0%, rgba(9,120,8,1) 100%);
+}
+#nameField , #settingPassField
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent red transparent;
+}
+#usernameDisplay
+{
+    -fx-text-fill:
+     linear-gradient(to right, #FBAB7E 0%, #F7CE68 100%);
+
+}

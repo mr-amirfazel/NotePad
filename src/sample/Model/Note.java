@@ -2,14 +2,13 @@ package sample.Model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Note implements Serializable {
-    private String note;
+    private final String note;
     private boolean isChecked;
     private boolean isStarred;
-    private LocalDate publishDate;
-    private String title;
+    private final LocalDate publishDate;
+    private final String title;
 
     public Note(String note, String title) {
         this.note = note;
