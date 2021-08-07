@@ -11,68 +11,64 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="infoPane" onKeyPressed="#handleKeyEvent" prefHeight="450.0" prefWidth="740.0" stylesheets="@Styles/Profile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Profile">
-   <children>
-      <VBox layoutX="626.0" layoutY="160.0" prefHeight="225.0" prefWidth="110.0">
-         <children>
-            <ImageView fitHeight="113.0" fitWidth="106.0" onMouseClicked="#saveProfile" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Images/save.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fitHeight="113.0" fitWidth="106.0" onMouseClicked="#goToSetting" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Images/goBack.png" />
-               </image>
-            </ImageView>
-         </children>
-      </VBox>
-      <Label fx:id="usernameDisplay" alignment="CENTER" layoutX="108.0" prefHeight="54.0" prefWidth="482.0" text="Label">
+<AnchorPane fx:id="infoPane" onKeyPressed="#handleKeyEvent" prefHeight="450.0" prefWidth="740.0"
+            stylesheets="@Styles/Profile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controllers.Profile">
+   <VBox layoutX="626.0" layoutY="160.0" prefHeight="225.0" prefWidth="110.0">
+      <ImageView fitHeight="113.0" fitWidth="106.0" onMouseClicked="#saveProfile" pickOnBounds="true"
+                 preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+         <Image url="@Images/save.png"/>
+      </ImageView>
+      <ImageView fitHeight="113.0" fitWidth="106.0" onMouseClicked="#goToSetting" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@Images/goBack.png"/>
+      </ImageView>
+   </VBox>
+   <Label fx:id="usernameDisplay" alignment="CENTER" layoutX="108.0" prefHeight="54.0" prefWidth="482.0" text="Label">
+      <font>
+         <Font size="40.0"/>
+      </font>
+   </Label>
+   <VBox layoutX="89.0" layoutY="71.0" prefHeight="357.0" prefWidth="290.0">
+      <Label prefHeight="18.0" prefWidth="110.0" text="name:">
          <font>
-            <Font size="40.0" />
+            <Font name="Arial" size="28.0"/>
          </font>
       </Label>
-      <VBox layoutX="89.0" layoutY="71.0" prefHeight="357.0" prefWidth="290.0">
-         <children>
-            <Label prefHeight="18.0" prefWidth="110.0" text="name:">
-               <font>
-                  <Font name="Arial" size="28.0" />
-               </font></Label>
-            <TextField fx:id="nameField" pickOnBounds="false">
-               <VBox.margin>
-                  <Insets top="1.0" />
-               </VBox.margin>
-            </TextField>
-            <Label prefHeight="18.0" prefWidth="150.0" text="password">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="Arial" size="23.0" />
-               </font>
-            </Label>
-            <TextField fx:id="settingPassField">
-               <VBox.margin>
-                  <Insets top="12.0" />
-               </VBox.margin>
-            </TextField>
-            <Label prefHeight="18.0" prefWidth="150.0" text="Birth Date">
-               <VBox.margin>
-                  <Insets top="25.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="birthDate" editable="false" prefHeight="26.0" prefWidth="292.0" promptText="birthDate" showWeekNumbers="true">
-               <VBox.margin>
-                  <Insets top="16.0" />
-               </VBox.margin>
-            </DatePicker>
-         </children>
-      </VBox>
-   </children>
+      <TextField fx:id="nameField" pickOnBounds="false">
+         <VBox.margin>
+            <Insets top="1.0"/>
+         </VBox.margin>
+      </TextField>
+      <Label prefHeight="18.0" prefWidth="150.0" text="password">
+         <VBox.margin>
+            <Insets top="20.0"/>
+         </VBox.margin>
+         <font>
+            <Font name="Arial" size="23.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="settingPassField">
+         <VBox.margin>
+            <Insets top="12.0"/>
+         </VBox.margin>
+      </TextField>
+      <Label prefHeight="18.0" prefWidth="150.0" text="Birth Date">
+         <VBox.margin>
+            <Insets top="25.0"/>
+         </VBox.margin>
+         <font>
+            <Font size="24.0"/>
+         </font>
+      </Label>
+      <DatePicker fx:id="birthDate" editable="false" prefHeight="26.0" prefWidth="292.0" promptText="birthDate"
+                  showWeekNumbers="true">
+         <VBox.margin>
+            <Insets top="16.0"/>
+         </VBox.margin>
+      </DatePicker>
+   </VBox>
 </AnchorPane>
